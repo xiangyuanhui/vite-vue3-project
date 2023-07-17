@@ -1,7 +1,14 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
-var html = 'nihao ';
+var html = 'nihao';
 
+const test = () => {
+
+  console.log(222)
+
+}
+
+test();
 </script>
 
 <template>
@@ -23,6 +30,7 @@ var html = 'nihao ';
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }

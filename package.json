@@ -9,7 +9,9 @@
     "preview": "vite preview",
     "lint": "eslint src",
     "fix": "eslint src --fix",
-    "lint:stylelint": "stylelint --cache --fix \"**/*.{vue,less,postcss,css,scss}\" --cache --cache-location node_modules/.cache/stylelint/"
+    "stylelint": "stylelint --cache --fix \"**/*.{vue,less,postcss,css,scss}\" --cache --cache-location node_modules/.cache/stylelint/",
+    "format": "prettier --write \"**/*.{html,vue,ts,js,json,md}\"",
+    "prepare": "husky install"
   },
   "dependencies": {
     "vue": "^3.3.4"
@@ -25,6 +27,7 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-vue": "^9.15.1",
+    "husky": "^8.0.0",
     "postcss": "^8.4.26",
     "postcss-html": "^1.5.0",
     "prettier": "^3.0.0",

@@ -4,6 +4,7 @@ module.exports = {
     es2021: true,
   },
   extends: [
+    'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:vue/vue3-essential',
     'plugin:prettier/recommended',
@@ -27,9 +28,9 @@ module.exports = {
   },
   plugins: ['@typescript-eslint', 'vue'],
   /**
-   * 'off'或0:关闭规格校验
-   * 'warn'或1: 警告提示，代码可正常运行
-   * 'error'或2: 错误提示，代码不能运行
+   * "off"或0:关闭规格校验
+   * "warn"或1: 警告提示，代码可正常运行
+   * "error"或2: 错误提示，代码不能运行
    * ***/
   rules: {
     'no-var': 'error',
