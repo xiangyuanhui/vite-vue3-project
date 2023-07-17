@@ -1,14 +1,12 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
-var html = 'nihao';
+var html = 'nihao'
 
 const test = () => {
-
   console.log(222)
-
 }
 
-test();
+test()
 </script>
 
 <template>
