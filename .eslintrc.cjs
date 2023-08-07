@@ -34,6 +34,7 @@ module.exports = {
    * ***/
   rules: {
     'no-var': 'error',
+    'no-unused-vars': 'off',
     'no-multiple-empty-lines': ['warn', { max: 1 }], // 不允许多个空格
     'no-unexpected-multiline': 'error', // 禁止多余的空行
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
@@ -42,8 +43,9 @@ module.exports = {
     // typeScript
     '@typescript-eslint/ban-types': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
-    '@typescript-eslint/no-unused-vars': 'error',
+    '@typescript-eslint/no-unused-vars': 'off',
 
+    'vue/multi-word-component-names': 'off',
     'vue/array-bracket-spacing': 'error',
     'vue/arrow-spacing': 'error',
     'vue/block-spacing': 'error',
