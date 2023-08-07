@@ -6,8 +6,7 @@ import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 // 引入mock
 import { viteMockServe } from 'vite-plugin-mock'
 // 引入
-// import { visualizer } from 'rollup-plugin-visualizer'
-console.log('执行-======》')
+import { visualizer } from 'rollup-plugin-visualizer'
 // https://vitejs.dev/config/
 export default defineConfig(({ command }: ConfigEnv): UserConfig => {
   return {
@@ -22,7 +21,12 @@ export default defineConfig(({ command }: ConfigEnv): UserConfig => {
         mockPath: './src/mock',
         localEnabled: command === 'serve',
       }),
-      // visualizer(), // 打包分析
+      visualizer({
+        open: true, // 注意这里要设置为true，否则无效
+        gzipSize: true, // 分析图生成的文件名
+        brotliSize: true, // 收集 brotli 大小并将其显示
+        filename: 'bundle.html', // 分析图生成的文件名
+      }), // 打包分析
     ],
     resolve: {
       alias: {
